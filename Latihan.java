@@ -27,23 +27,26 @@ public class Latihan {
          System.out.print("Jumlah Tamu Undangan:\n Gedung A = 100 - 200\n Gedung B = 200 - 300\n Gedung C = 300 - 400\n Masukkan Jumlah Tamu:  ");
         jumlahTamu = input.nextInt();
 
-        jenisGedung = (jumlahTamu <= 200)? "Gedung A" : "Gedung B";
-        jenisGedung = (jumlahTamu <= 300)? "Gedung B" : "Gedung C";
-        jenisGedung = (jumlahTamu <= 400)? "Gedung C" : "Gedung D";
-
-
+        if (jumlahTamu <=200) {
+            System.out.println("Anda akan menggunakan Gedung A");
+               } else if (200 <= jumlahTamu && jumlahTamu <=300 ) {
+                System.out.println("Anda akan menggunakan Gedung B");
+               }else if (300<= jumlahTamu && jumlahTamu <= 400) {
+                System.out.println("Anda akan menggunakan Gedung C");
+               } else {
+                System.out.println("Yang bener masukin tamunya woi");
+               }
         
 
-       if (jumlahTamu <=200) {
-    System.out.println("Anda akan menggunakan Gedung A");
-       } else if (200 <= jumlahTamu && jumlahTamu <=300 ) {
-        System.out.println("Anda akan menggunakan Gedung B");
-       }else if (300<= jumlahTamu && jumlahTamu <= 400) {
-        System.out.println("Anda akan menggunakan Gedung C");
-       } else {
-        System.out.println("Yang bener masukin tamunya woi");
-       }
-
+ if (jumlahTamu <=200) {
+            jenisGedung = "Gedung A";
+         }else if (200 <= jumlahTamu && jumlahTamu <=300 ) {
+            jenisGedung = "Gedung B";
+         }else if (300<= jumlahTamu && jumlahTamu <= 400){
+            jenisGedung = "Gedung C";
+         }else {
+           jenisGedung = "coba lagi";
+         }
 
 
         System.out.print("Layanan Tambahan : ");
@@ -57,7 +60,7 @@ public class Latihan {
             System.out.println("Tanggal Pemesanan :" + tanggalPemesanan);
             System.out.println("Tanggal Pelaksanaan Acara :" + tanggalPelaksanaanAcara);
             System.out.println("Jumlah Tamu Undangan :" + jumlahTamu);
-            System.out.println("Jenis Gedung : " + jenisGedung );
+            System.out.println("Jenis Gedung : " + jenisGedung);
             System.out.println("Layanan Tambahan: " + layananTambahan);
         } else {
             System.out.println("Maaf, Pemesanan yang anda minta tidak dapat kami proses. Silahkan coba lagi nanti.");
