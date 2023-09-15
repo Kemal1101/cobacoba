@@ -1,21 +1,39 @@
+import java.util.Scanner;
+
 public class Tulisan {
     public static void main(String[] args) {
-        System.out.println("apa apaan");
-        String sanaName = "Minatozaki";
-        String minaName = "Sharon";
-        System.out.println(minaName + " " + sanaName);
-        int x = 15, y = 6, z = 12;
-        System.out.println(x % y * z);
-        char myLetter = 'e';
-        System.out.println(myLetter);
-        boolean balon = true;
-        System.out.println(balon);
-        float numiNumi = (float) 1.29;
-        System.out.println (numiNumi);
+
+        Scanner sc = new Scanner(System.in);
+
+        float tinggiBadan;
+        String jenisKelamin;
         
-            
-            
+        System.out.println("*****BERAT BADAN IDEAL ANDA*****");
+        
+        System.out.print("Masukkan Tinggi Badan (cm): ");
+        tinggiBadan = sc.nextFloat();
+
+        System.out.print("Jenis Kelamin Anda\n \"L\" untuk Pria \"P\" untuk Perempuan: ");
+        jenisKelamin = sc.next().toUpperCase();
+
+        double beratbadanIdeal;
+
+        if (jenisKelamin.equals("L") ) {
+            beratbadanIdeal = ((tinggiBadan - 100) - (tinggiBadan - 100) * 0.1);
+        } else if (jenisKelamin.equals("P")) {
+            beratbadanIdeal = ((tinggiBadan - 100) - (tinggiBadan - 100) * 0.15);
+        } else {
+            System.out.println("Seng Genah Woiiiiii");
+            return;
         }
-        
-    
+
+        System.out.println("Berat Badan Ideal Anda Adalah (kg): " + beratbadanIdeal);
+
+       
+
+
+
+
     }
+}
+    

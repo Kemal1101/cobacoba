@@ -13,9 +13,8 @@ public class nyobain {
 
         System.out.print("Suku ke Berapa?: ");
         int n = input.nextInt();
-        int Hasil = n - 1;
-        int Hasil_1 = Hasil * b;
-        int Hasil_2 = Hasil_1 + a;
+        
+        int Hasil_2 = a + (n - 1) * b;
 
         System.out.println("Hasilnya adalah: " + Hasil_2);
         
