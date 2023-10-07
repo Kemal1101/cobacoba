@@ -2,22 +2,17 @@ import java.util.Scanner;
 
 public class nyobain {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("*Menghitung keliling dan Luas Persegi Panjang*");
+        Scanner sc = new Scanner(System.in);
+    int nomor;
 
-        System.out.print("Suku Pertama: ");
-        int a = input.nextInt();
+System.out.println("nyoba nyoba gan");
+nomor = sc.nextInt();
 
-        System.out.print("Beda Baris: ");
-        int b = input.nextInt ();
+while (nomor <= 10){
+    System.out.println(nomor);
+    nomor++;
+}
 
-        System.out.print("Suku ke Berapa?: ");
-        int n = input.nextInt();
-        
-        int Hasil_2 = a + (n - 1) * b;
 
-        System.out.println("Hasilnya adalah: " + Hasil_2);
-        
-        input.close();
-    }
+}
 }

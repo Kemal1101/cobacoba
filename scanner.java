@@ -22,5 +22,7 @@ public class scanner {
         }
 
         System.out.println("Berat badan ideal Anda adalah: " + beratBadanIdeal + " kg");
+
+        input.close();
     }
 }
