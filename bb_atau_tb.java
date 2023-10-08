@@ -19,15 +19,20 @@ public class bb_atau_tb{
         }
 
         if(ygMaudiInput.equalsIgnoreCase("t")){
-            System.out.print("Masukkan Tinggi Badan Anda (dalam cm): ");
+           System.out.print("Masukkan Tinggi Badan Anda : " );
         tinggiBadan = sc.nextFloat();
         while (tinggiBadan < 100){
             System.out.println("Input yang Anda masukkan salah. Mohon ulangi.");
-             System.out.print("Masukkan Tinggi Badan Anda (dalam cm): ");
+             System.out.print("Masukkan Tinggi Badan Anda : ");
              tinggiBadan = sc.nextFloat();
             }
         System.out.print("\"P\" untuk Perempuan\n\"L\" untuk Laki-Laki\n Masukkan Jenis Kelamin Anda: ");
         jenisKelamin = sc.next().toUpperCase();
+        while (!(jenisKelamin.equalsIgnoreCase("l")) && !(jenisKelamin.equalsIgnoreCase("p"))) {
+            System.out.println("Input yang Anda masukkan salah. Mohon ulangi.");
+            System.out.print("\"P\" untuk Perempuan\n\"L\" untuk Laki-Laki\n Masukkan Jenis Kelamin Anda: ");
+            jenisKelamin = sc.next().toUpperCase();
+        }
 
             if (jenisKelamin.equalsIgnoreCase("L")) {
             bbIdeal = (tinggiBadan - 100) - (tinggiBadan - 100) * 0.1F;
@@ -45,6 +50,11 @@ public class bb_atau_tb{
             
             System.out.print("\"P\" untuk Perempuan\n\"L\" untuk Laki-Laki\n Masukkan Jenis Kelamin Anda: ");
                     jenisKelamin = sc.next().toLowerCase();
+            while(!(jenisKelamin.equalsIgnoreCase("l")) && !(jenisKelamin.equalsIgnoreCase("p"))){
+                 System.out.println("Input yang Anda masukkan salah. Mohon ulangi.");
+                 System.out.print("\"P\" untuk Perempuan\n\"L\" untuk Laki-Laki\n Masukkan Jenis Kelamin Anda: ");
+                 jenisKelamin = sc.next().toLowerCase();
+            }
             if (jenisKelamin.equals("l")){
                 ttBadan = 100 + beratBadan / 0.9F;
             }else if (jenisKelamin.equals("p")){
