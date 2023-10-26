@@ -1,28 +1,37 @@
-import java.util.Scanner;
+    import java.util.Scanner;
 
-public class scanner {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Masukkan tinggi badan (dalam cm): ");
-        double tinggiBadan = input.nextDouble();
-
-        System.out.print("Pilih jenis kelamin (pria/wanita): ");
-        String jenisKelamin = input.next().toLowerCase();
-
-        double beratBadanIdeal;
-
-        if (jenisKelamin.equals("pria")) {
-            beratBadanIdeal = (tinggiBadan - 100) - ((tinggiBadan - 100) * 0.1);
-        } else if (jenisKelamin.equals("wanita")) {
-            beratBadanIdeal = (tinggiBadan - 100) - ((tinggiBadan - 100) * 0.15);
-        } else {
-            System.out.println("Jenis kelamin yang dimasukkan tidak valid.");
-            return;
+    public class scanner {
+        public static void main(String[] args) {
+            
+            int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+            System.out.println(myNumbers.length);
+            System.out.println(myNumbers[0].length);
+            int i = 0; 
+            while (i < myNumbers.length ) {
+                int j = 0;
+                 while( j < myNumbers[i].length){
+                  System.out.println(myNumbers[i][j]);
+                  ++j;
+                }
+                ++i;
+              }
+           
+        
+        
+        
+        
+        
+        
+        
+        
         }
-
-        System.out.println("Berat badan ideal Anda adalah: " + beratBadanIdeal + " kg");
-
-        input.close();
+        
+    
+    
+    
+    
+    
+    
     }
-}
+        
+    
